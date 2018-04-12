@@ -12,7 +12,7 @@ export default class Header extends React.Component {
         return (
             <div id="header">
                 <h1 className="title">Job Application Tracker</h1>
-                <Button className='login' onClick={() => this.props.clickLogout()}  >{name}</Button>
+                <Button className='login' onClick={() => this.props.clickLogout()}>{name}</Button>
             </div>
         );
     }
