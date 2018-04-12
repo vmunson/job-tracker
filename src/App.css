@@ -1,0 +1,16 @@
+#header{
+  height: 100px;
+  background-color: rgb(109, 114, 114);
+  margin-bottom: 1em;
+}
+.title{
+  text-align: center;
+  position: relative;
+  top: .5em;
+  
+}
+.login{
+  margin: 1em;
+  position: relative;
+  top: -1em;
+}
