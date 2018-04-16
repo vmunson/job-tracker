@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Auth from './components/Login/Auth';
 import Header from './components/Header'
-import JobInput from './components/JobInfo/JobInput'
+import JobInfo from './components/JobInfo/JobInfo'
 
 class App extends Component {
   constructor() {
@@ -39,7 +39,7 @@ class App extends Component {
     }
     else{
       return (
-        <JobInput token={this.state.sessionToken}/>
+        <JobInfo token={this.state.sessionToken}/>
       )
     }
   }

@@ -12,6 +12,8 @@ export default class JobInput extends React.Component {
             company: '',
             status: '',
         }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange(e) {
         console.log(this.state)
@@ -22,7 +24,7 @@ export default class JobInput extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        fetch("localhost:3000/api/jobinput", {
+        fetch("localhost:3000/api/jobinfo", {
             method: 'POST',
             body: JSON.stringify({ jobinput: this.state }),
             headers: new Headers({
@@ -38,6 +40,7 @@ export default class JobInput extends React.Component {
 
         return (
             <div>
+                <h1>Enter Job Information</h1>
                 <Form id='jobInput' onSubmit={this.handleSubmit}>
                     <FormGroup>
                         <Label>Date Applied: </Label>
