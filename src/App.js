@@ -32,7 +32,7 @@ class App extends Component {
     localStorage.removeItem('token');
   }
   protectedViews(){
-    if(this.state.sessionToken == null || this.state.sessionToken == ''){
+    if(this.state.sessionToken === null || this.state.sessionToken === ''){
       return (
         <Auth setSessionToken={this.setSessionState}/>
       )
