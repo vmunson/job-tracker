@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup } from 'reactstrap';
+import { Button, Form, FormGroup } from 'reactstrap';
 import '../../App.css'
 
 class Login extends React.Component {
