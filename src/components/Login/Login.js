@@ -22,7 +22,7 @@ class Login extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    fetch("localhost:3000/api/login", {
+    fetch("http://localhost:3000/api/login", {
       method: 'POST',
       body: JSON.stringify({ user: this.state }),
       headers: new Headers({

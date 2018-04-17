@@ -23,7 +23,7 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    fetch("localhost:3000/api/user", {
+    fetch("http://localhost:3000/api/user", {
       method: 'POST',
       body: JSON.stringify({ user: this.state }),
       headers: new Headers({

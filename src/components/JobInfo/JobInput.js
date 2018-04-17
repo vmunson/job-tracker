@@ -24,9 +24,9 @@ export default class JobInput extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        fetch("localhost:3000/api/jobinfo", {
+        fetch("http://localhost:3000/api/jobinfo", {
             method: 'POST',
-            body: JSON.stringify({ jobinput: this.state }),
+            body: JSON.stringify({ jobinfo: this.state }),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token

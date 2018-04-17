@@ -27,7 +27,7 @@ export default class JobInput extends React.Component {
         this.fetchJobInfo()
     }
     fetchJobInfo() {
-        fetch("localhost:3000/api/jobinfo", {
+        fetch("http://localhost:3000/api/jobinfo", {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -43,21 +43,21 @@ export default class JobInput extends React.Component {
         this.fetchJobInfo()
     }
     handleDelete(event) {
-        fetch("localhost:3000/api/jobinfo", {
+        fetch("http://localhost:3000/api/jobinfo", {
             method: 'DELETE',
-            body: JSON.stringify({ jobinput: { id: event.target.id } }),
+            body: JSON.stringify({ jobinfo: { id: event.target.id } }),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
             })
         })
-            .then((res) => this.updatePIArray())
+            .then((res) => this.updateJIArray())
     }
     handleUpdate(e) {
         e.preventDefault()
-        fetch("localhost:3000/api/jobinfo", {
+        fetch("http://localhost:3000/api/jobinfo", {
             method: 'PUT',
-            body: JSON.stringify({ jobinput: this.state }),
+            body: JSON.stringify({ jobinfo: this.state }),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
@@ -102,7 +102,7 @@ export default class JobInput extends React.Component {
                                             <td>{jobInfo.title}</td>
                                             <td>{jobInfo.company}</td>
                                             <td>{jobInfo.status}</td>
-                                            <td><Button id={jobInfo.id} size="sm" onClick={e => this.toggle(jobInfo.id)} color="primary">Update</Button></td>
+                                            <td><Button  size="sm" onClick={e => this.toggle(jobInfo.id)} color="primary">Update</Button></td>
                                             <td><Button id={jobInfo.id} size="sm" onClick={this.handleDelete} color="danger">Delete</Button></td>
                                         </tr>
                                     )
@@ -115,6 +115,7 @@ export default class JobInput extends React.Component {
         } else {
             return (
                 <div>
+                    <h1>Update Information</h1>
                     <Form onSubmit={this.handleUpdate}>
                         <FormGroup>
                         <Label>Date Applied: </Label>
@@ -134,6 +135,7 @@ export default class JobInput extends React.Component {
                             <option>Didn't get the job</option>
                             <option>Waiting to hear back</option>
                         </Input>
+                        <Button color="danger" onClick={()=>this.setState({editJobInfo:false})}>Cancel</Button>
                         <Button id='jobInputButton' type="submit" color="success">Save</Button>
                         </FormGroup>
                     </Form>

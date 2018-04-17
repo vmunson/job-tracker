@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div>
         <Header clickLogout={this.logout} token={this.state.sessionToken}/>
-        <Auth setSessionToken={this.setSessionState}/>
+        {this.protectedViews()}
       </div>
     );
   }
