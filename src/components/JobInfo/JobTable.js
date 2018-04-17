@@ -81,16 +81,18 @@ export default class JobInput extends React.Component {
     jobInfoView() {
         if (!this.state.editJobInfo) {
             return (
-                <div>
-                    <h3>Job Information</h3>
+                <div id='jobTable'>
+                    <h3 className='jobTitle'>Job Information</h3>
                     <hr />
-                    <Table className="no-border">
+                    <Table borderless dark>
                         <thead>
                             <tr>
                                 <th>Date</th>
                                 <th>Title</th>
                                 <th>Company</th>
                                 <th>Status</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -114,8 +116,8 @@ export default class JobInput extends React.Component {
             )
         } else {
             return (
-                <div>
-                    <h1>Update Information</h1>
+                <div className='jobInfo'>
+                    <h1 className='jobTitle'>Update Information</h1>
                     <Form onSubmit={this.handleUpdate}>
                         <FormGroup>
                         <Label>Date Applied: </Label>
@@ -135,8 +137,8 @@ export default class JobInput extends React.Component {
                             <option>Didn't get the job</option>
                             <option>Waiting to hear back</option>
                         </Input>
-                        <Button color="danger" onClick={()=>this.setState({editJobInfo:false})}>Cancel</Button>
-                        <Button id='jobInputButton' type="submit" color="success">Save</Button>
+                        <Button className='buttons' type="submit" color="success">Save</Button>
+                        <Button className='buttons' color="danger" onClick={()=>this.setState({editJobInfo:false})}>Cancel</Button>
                         </FormGroup>
                     </Form>
                 </div>

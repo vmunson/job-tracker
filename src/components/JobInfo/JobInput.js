@@ -39,17 +39,17 @@ export default class JobInput extends React.Component {
     render() {
 
         return (
-            <div>
-                <h1>Enter Job Information</h1>
+            <div className='jobInfo'>
+                <h1 className='jobTitle'>Enter Job Information</h1>
                 <Form id='jobInput' onSubmit={this.handleSubmit}>
                     <FormGroup>
-                        <Label>Date Applied: </Label>
+                        <Label className='label'>Date Applied: </Label>
                         <Input className='form-control' type='date' name='date' onChange={this.handleChange}/>
-                        <Label>Job Title: </Label>
+                        <Label className='label'>Job Title: </Label>
                         <Input className='form-control' type='text' name='title' placeholder='Job Title' onChange={this.handleChange}/>
-                        <Label>Company Name: </Label>
+                        <Label className='label'>Company Name: </Label>
                         <Input className='form-control' type='text' name='company' placeholder='Company Name' onChange={this.handleChange}/>
-                        <Label>Job Status: </Label>
+                        <Label className='label'>Job Status: </Label>
                         <Input className="form-control" type="select" name="status" onChange={this.handleChange}>
                             <option></option>
                             <option>Applied and waiting to hear</option>
@@ -60,7 +60,7 @@ export default class JobInput extends React.Component {
                             <option>Didn't get the job</option>
                             <option>Waiting to hear back</option>
                         </Input>
-                        <Button id='jobInputButton' type="submit" color="success">Save</Button>
+                        <Button className='buttons' type="submit" color="success">Save</Button>
                     </FormGroup>
                 </Form>
             </div>

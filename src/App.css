@@ -1,6 +1,12 @@
+#main{
+  background-color: rgb(134, 83, 123);
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 #header{
   height: 100px;
-  background-color: rgb(109, 114, 114);
+  background-color: rgb(134, 187, 154);
   margin-bottom: 1em;
 }
 .title{
@@ -13,4 +19,29 @@
   margin: 1em;
   position: relative;
   top: -1em;
+}
+#auth{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%
+}
+.label{
+  color: white;
+}
+.jobInfo{
+  width: 75%;
+  margin: auto;
+}
+.jobTitle{
+  color: white;
+  text-align: center;
+}
+.buttons{
+  margin-top: 1em;
+  margin-right: 2em;
+}
+#jobTable{
+  width: 90%;
+  margin: auto;
 }

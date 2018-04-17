@@ -6,7 +6,7 @@ import '../../App.css'
 
 const Auth = (props) => {
     return (
-        <div>
+        <div id='auth'>
             <Row>
                 <Col>
                     <Signup setSessionToken={props.setSessionToken} />

@@ -45,7 +45,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div id='main'>
         <Header clickLogout={this.logout} token={this.state.sessionToken}/>
         {this.protectedViews()}
       </div>
