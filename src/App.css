@@ -1,6 +1,6 @@
 #main{
   background-color: rgb(134, 83, 123);
-  position: relative;
+  position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -13,7 +13,6 @@
   text-align: center;
   position: relative;
   top: .5em;
-  
 }
 .login{
   margin: 1em;

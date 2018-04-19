@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form, FormGroup } from 'reactstrap';
 import '../../App.css'
 
-class Login extends React.Component {
+export default class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,4 +55,3 @@ class Login extends React.Component {
   }
 }
 
-export default Login;

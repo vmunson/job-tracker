@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input, Table } from 'reactstrap'
 
 import '../../App.css'
 
-export default class JobInput extends React.Component {
+export default class JobTable extends React.Component {
     constructor(props) {
         super(props)
         this.state = {

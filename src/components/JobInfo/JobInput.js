@@ -31,8 +31,7 @@ export default class JobInput extends React.Component {
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
             })
-        })
-            .then(() => {
+        }).then(() => {
                 document.getElementById("jobInput").reset()
             })
     }
@@ -53,7 +52,7 @@ export default class JobInput extends React.Component {
                         <Input className="form-control" type="select" name="status" onChange={this.handleChange}>
                             <option></option>
                             <option>Applied and waiting to hear</option>
-                            <option>Received intial phone interview</option>
+                            <option>Received initial phone interview</option>
                             <option>Got tech interview</option>
                             <option>Got an in person interview</option>
                             <option>Got the job</option>
